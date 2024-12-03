@@ -1,10 +1,19 @@
 .game_board {
-  width: 95%;
-  height: 500px;
-  border-bottom: 20px solid green;
+  width: 100%;
+  height: 80vh;
+  border-bottom: 10px solid green;
+  /* border: solid 1px red; */
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+
+.grass {
+  width: 100%;
+  height: 5vh;
+  background: green;
+  position: absolute;
+  bottom: 0;
 }
 
 .pipe {
@@ -29,6 +38,44 @@
   width: 550px;
   /* background: url('/src/img/clouds.png') repeat-x; */
   animation: clouds_animation 20s linear infinite;
+}
+
+.menu_restart {
+  display: none;
+  visibility: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 100px;
+  width: 200px;
+
+  background: #f1f1f1;
+  padding: 10px;
+  border: solid 1px #ff9900;
+  border-radius: 5px;
+}
+
+.gameover_title {
+  color: #200;
+  font-size: 2rem;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 2px #ff9900;
+}
+
+.restart_info {
+  background: #ff9900;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 @keyframes pipe_animation {
