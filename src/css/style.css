@@ -1,35 +1,24 @@
+@import url("/src/css/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
-.body_index {
+.body_1 {
   background: linear-gradient(#87ceeb, #e0f6ff);
   min-height: 100vh;
-  padding: 0 1rem;
 }
-.main_index {
-  padding: 1rem;
+.header_1 {
+  padding: 2rem;
+  text-align: center;
+  /* position: fixed; */
 }
-.principal_title {
-  margin: 1rem;
+.header_1 .principal_title {
   color: #200;
   font-size: 3rem;
   font-family: "Luckiest Guy", cursive;
-  text-align: center;
   text-shadow: 2px 2px #ff9900;
-}
-.game_list {
-  padding: 1rem 0;
-}
-.game_item {
-  margin: 0.3em;
-  background-color: #ddd;
-  border-radius: 10px;
-  display: flex;
   transition: 0.5s;
 }
-.game_item:hover {
-  background-color: #bbb;
-}
-.game_item a {
-  padding: 0.5em;
-  color: black;
+
+.header_1 .principal_title:hover {
+  color: #600;
+  text-shadow: 5px 5px #ffaa11;
 }

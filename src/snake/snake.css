@@ -1,0 +1,6 @@
+h1 {
+  font-size: 3rem;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 2px #ff9900;
+  transition: 0.5s;
+}

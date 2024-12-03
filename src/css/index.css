@@ -1,0 +1,20 @@
+.main_index {
+  padding: 2rem;
+}
+.game_list {
+  padding: 1rem 0;
+}
+.game_item {
+  margin: 0.3em;
+  background-color: #ddd;
+  border-radius: 10px;
+  display: flex;
+  transition: 0.5s;
+}
+.game_item:hover {
+  background-color: #bbb;
+}
+.game_item a {
+  padding: 0.5em;
+  color: black;
+}
