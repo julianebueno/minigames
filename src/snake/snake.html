@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="./snake.css">
-  <script src="./snake.js" defer></script>
-  <title>SNAKE</title>
-</head>
-<body class="body_1">
-  <header class="header_1">
-    <a class="principal_title" href="../../index.html"> MINIGAMES </a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./snake.css" />
+    <script src="./snake.js" defer></script>
+    <title>SNAKE</title>
+  </head>
+  <body class="body_1">
+    <header class="header_1">
+      <a class="principal_title" href="../../index.html"> MINIGAMES </a>
+    </header>
 
-  <h1>SNAKE</h1>
-  
-</body>
+    <div class="score">score: <span class="score--value">00</span></div>
+
+    <div class="menu-screen">
+      <span class="game-over">game over</span>
+      <span class="final-score">score <span>00</span></span>
+
+      <button class="btn-play">
+        <span class="material-symbols-outlined"> play_circle </span>
+
+        Jogar novamente
+      </button>
+    </div>
+
+    <canvas width="600" height="600"></canvas>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
