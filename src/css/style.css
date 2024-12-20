@@ -4,6 +4,8 @@
 .body_1 {
   background: linear-gradient(#87ceeb, #e0f6ff);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .header_1 {
   padding: 2rem;
