@@ -1,0 +1,13 @@
+.game-board {
+  width: 100%;
+  height: 80vh;
+  border-top: dotted 1px red;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.treno{
+  position:absolute; 
+  border: dotted 1px #ff0059; 
+} 
