@@ -1,15 +1,7 @@
-var elemento = document.getElementById('treno');
-var gameBoard = document.querySelector('.game-board');
+const elementoTreno = document.getElementById('treno');
+const gameBoard = document.querySelector('.game-board');
 
-elemento.addEventListener('dblclick', function () {
-  window.addEventListener('mousemove', moverTreno);
-  elemento.addEventListener('dblclick', removeMoverTreno);
-});
-
-function removeMoverTreno() {
-  window.removeEventListener('mousemove', moverTreno);
-  elemento.removeEventListener('dblclick', removeMoverTreno);
-}
+window.addEventListener('mousemove', moverTreno);
 
 function moverTreno(event) {
   // Posição da gameBoard
@@ -20,8 +12,8 @@ function moverTreno(event) {
   var coordX = event.clientX - 150;
 
   // Impedir que o treno saia da área da game-board
-  var trenoWidth = elemento.offsetWidth;
-  var trenoHeight = elemento.offsetHeight;
+  var trenoWidth = elementoTreno.offsetWidth;
+  var trenoHeight = elementoTreno.offsetHeight;
 
   // Limitar a posição horizontal
   if (coordX < gameBoardRect.left) {
@@ -38,6 +30,6 @@ function moverTreno(event) {
   }
 
   // Atualizar a posição do treno
-  elemento.style.top = coordY - gameBoardRect.top + "px";
-  elemento.style.left = coordX - gameBoardRect.left + "px";
+  elementoTreno.style.top = coordY - gameBoardRect.top + "px";
+  elementoTreno.style.left = coordX - gameBoardRect.left + "px";
 }

@@ -1,13 +1,40 @@
 .game-board {
-  width: 100%;
-  height: 80vh;
-  border-top: dotted 1px red;
+  display: flex;
+  flex: 1;
   position: relative;
   overflow: hidden;
 }
 
+.clouds {
+  position: absolute;
+  width: 200%;
+  height: 75px;
+  background: url('./images/clouds.png') repeat-x;
+  background-size: contain;
+  opacity: calc(1 - 0.5);
+  animation: clouds_animation 15s linear infinite;
+}
+
+.clouds2 {
+  margin-top: 25px;
+  position: absolute;
+  width: 200%;
+  height: 100px;
+  background: url('./images/clouds.png') repeat-x;
+  background-size: contain;
+  opacity: calc(1 - 0.5);
+  animation: clouds_animation 10s linear infinite;
+}
+
+@keyframes clouds_animation {
+  from {
+    right: 0%;
+  }
+  to {
+    right: -100%;
+  }
+}
 
 .treno{
-  position:absolute; 
-  border: dotted 1px #ff0059; 
+  position:absolute;
 } 
