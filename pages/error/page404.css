@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.error_404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 200px;
+  background: #f1f1f1;
+  border-radius: 16px;
+}
