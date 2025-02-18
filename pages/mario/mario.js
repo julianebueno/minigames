@@ -2,6 +2,7 @@ const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const clouds = document.querySelector(".clouds");
 const menu_restart = document.querySelector(".menu_restart");
+const restart_info = document.querySelector(".restart_info");
 
 const jump = (e) => {
   if (e.keyCode === 32) {
@@ -12,11 +13,11 @@ const jump = (e) => {
   }
 };
 
-const reset = (e) => {
-  if (e.keyCode === 82) {
-    location.reload();
-  }
+const reset = () => {
+  location.reload();
 };
+
+const timeReset = 2000;
 
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
@@ -39,10 +40,14 @@ const loop = setInterval(() => {
     mario.style.marginLeft = "50px";
 
     menu_restart.style.visibility = "visible";
-    
+    restart_info.innerHTML = `Wait for restart: ${timeReset/1000}s`;
+
+    setInterval(() => {
+      reset();
+    }, timeReset);
+
     clearInterval(loop);
   }
 }, 10);
 
 document.addEventListener("keydown", jump);
-document.addEventListener("keydown", reset);
