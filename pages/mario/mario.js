@@ -5,7 +5,7 @@ const menu_restart = document.querySelector(".menu_restart");
 const restart_info = document.querySelector(".restart_info");
 
 const jump = (e) => {
-  if (e.keyCode === 32) {
+  if (e.keyCode === 32 || e.type === "click") {
     mario.classList.add("jump");
     setTimeout(() => {
       mario.classList.remove("jump");
