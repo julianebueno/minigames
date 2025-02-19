@@ -18,6 +18,12 @@ const paths = [
     alt: "previewSnake",
   },
   {
+    title: "Rubiks Cube 2D",
+    link: "./pages/RubiksCube2D/RubiksCube2D.html",
+    imgsrc: './src/previews/previewRubiksCube2D.jpg',
+    alt: "previewRubiksCube2D",
+  },  
+  {
     title: "Tetris",
     // link: "./pages/tetris/tetris.html",
     link: "./pages/error/page404.html",
