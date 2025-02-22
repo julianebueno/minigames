@@ -205,14 +205,14 @@ function rotateRow(row, clockwise) {
       square10 = square_17;
       square11 = square_14;
       square12 = square_11;
-      squareA = square_51;
-      squareB = square_52;
-      squareC = square_53;
-      squareD = square_56;
-      squareE = square_59;
-      squareF = square_58;
-      squareG = square_57;
-      squareH = square_54;
+      squareA = square_54;
+      squareB = square_57;
+      squareC = square_58;
+      squareD = square_59;
+      squareE = square_56;
+      squareF = square_53;
+      squareG = square_52;
+      squareH = square_51;
       break;
     case 4:
       square1 = square_57;
@@ -263,14 +263,14 @@ function rotateRow(row, clockwise) {
       square10 = square_37;
       square11 = square_34;
       square12 = square_31;
-      squareA = square_11;
-      squareB = square_12;
-      squareC = square_13;
-      squareD = square_16;
-      squareE = square_19;
-      squareF = square_18;
-      squareG = square_17;
-      squareH = square_14;
+      squareA = square_14;
+      squareB = square_17;
+      squareC = square_18;
+      squareD = square_19;
+      squareE = square_16;
+      squareF = square_13;
+      squareG = square_12;
+      squareH = square_11;
       break;
     case 7:
       square1 = square_17;
@@ -321,14 +321,14 @@ function rotateRow(row, clockwise) {
       square10 = square_57;
       square11 = square_54;
       square12 = square_51;
-      squareA = square_31;
-      squareB = square_32;
-      squareC = square_33;
-      squareD = square_36;
-      squareE = square_39;
-      squareF = square_38;
-      squareG = square_37;
-      squareH = square_34;
+      squareA = square_34;
+      squareB = square_37;
+      squareC = square_38;
+      squareD = square_39;
+      squareE = square_36;
+      squareF = square_33;
+      squareG = square_32;
+      squareH = square_31;
       break;
     }
 
