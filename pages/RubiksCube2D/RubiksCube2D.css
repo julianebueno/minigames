@@ -209,6 +209,12 @@
   transform: translate(-220px, 70px);
 }
 
+.button_control {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 /* #endregion buttons */
 
 /* ================================ */

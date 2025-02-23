@@ -15,6 +15,9 @@ for (let i = 1; i <= 9; i++) {
   buttonsA.push(document.getElementById(`button_${i}A`));
 }
 
+const buttonReset = document.getElementById("button_reset");
+const buttonShuffle = document.getElementById("button_shuffle");
+
 //#endregion get elements
 
 //#region colors
@@ -152,5 +155,17 @@ for (let i = 0; i < buttonsA.length; i++) {
     rotateRow(i + 1, false);
   });
 }
+
+buttonReset.addEventListener("click", () => {
+  window.location.reload();
+});
+
+buttonShuffle.addEventListener("click", () => {
+  for (let i = 0; i < 100; i++) {
+    let randomRow = Math.floor(Math.random() * 9) + 1;
+    let randomDirection = Math.floor(Math.random() * 2);
+    rotateRow(randomRow, randomDirection == 1);
+  }
+});
 
 //#endregion event listeners
