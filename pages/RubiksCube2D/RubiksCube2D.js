@@ -1,64 +1,11 @@
 //#region get elements
 // Squares
-const square_11 = document.getElementById("square_11");
-const square_12 = document.getElementById("square_12");
-const square_13 = document.getElementById("square_13");
-const square_14 = document.getElementById("square_14");
-const square_15 = document.getElementById("square_15");
-const square_16 = document.getElementById("square_16");
-const square_17 = document.getElementById("square_17");
-const square_18 = document.getElementById("square_18");
-const square_19 = document.getElementById("square_19");
-
-const square_21 = document.getElementById("square_21");
-const square_22 = document.getElementById("square_22");
-const square_23 = document.getElementById("square_23");
-const square_24 = document.getElementById("square_24");
-const square_25 = document.getElementById("square_25");
-const square_26 = document.getElementById("square_26");
-const square_27 = document.getElementById("square_27");
-const square_28 = document.getElementById("square_28");
-const square_29 = document.getElementById("square_29");
-
-const square_31 = document.getElementById("square_31");
-const square_32 = document.getElementById("square_32");
-const square_33 = document.getElementById("square_33");
-const square_34 = document.getElementById("square_34");
-const square_35 = document.getElementById("square_35");
-const square_36 = document.getElementById("square_36");
-const square_37 = document.getElementById("square_37");
-const square_38 = document.getElementById("square_38");
-const square_39 = document.getElementById("square_39");
-
-const square_41 = document.getElementById("square_41");
-const square_42 = document.getElementById("square_42");
-const square_43 = document.getElementById("square_43");
-const square_44 = document.getElementById("square_44");
-const square_45 = document.getElementById("square_45");
-const square_46 = document.getElementById("square_46");
-const square_47 = document.getElementById("square_47");
-const square_48 = document.getElementById("square_48");
-const square_49 = document.getElementById("square_49");
-
-const square_51 = document.getElementById("square_51");
-const square_52 = document.getElementById("square_52");
-const square_53 = document.getElementById("square_53");
-const square_54 = document.getElementById("square_54");
-const square_55 = document.getElementById("square_55");
-const square_56 = document.getElementById("square_56");
-const square_57 = document.getElementById("square_57");
-const square_58 = document.getElementById("square_58");
-const square_59 = document.getElementById("square_59");
-
-const square_61 = document.getElementById("square_61");
-const square_62 = document.getElementById("square_62");
-const square_63 = document.getElementById("square_63");
-const square_64 = document.getElementById("square_64");
-const square_65 = document.getElementById("square_65");
-const square_66 = document.getElementById("square_66");
-const square_67 = document.getElementById("square_67");
-const square_68 = document.getElementById("square_68");
-const square_69 = document.getElementById("square_69");
+const squares = [];
+for (let i = 1; i <= 6; i++) {
+  for (let j = 1; j <= 9; j++) {
+    squares.push(document.getElementById(`square_${i}${j}`));
+  }
+}
 
 // Buttons group 1
 const button_1H = document.getElementById("button_1H");
@@ -85,308 +32,161 @@ const button_9H = document.getElementById("button_9H");
 const button_9A = document.getElementById("button_9A");
 //#endregion get elements
 
+//#region colors
+
+for (let i = 0; i <= 8; i++) {
+  squares[i].style.backgroundColor = "red";
+}
+for (let i = 9; i <= 17; i++) {
+  squares[i].style.backgroundColor = "green";
+}
+for (let i = 18; i <= 26; i++) {
+  squares[i].style.backgroundColor = "yellow";
+}
+for (let i = 27; i <= 35; i++) {
+  squares[i].style.backgroundColor = "black";
+}
+for (let i = 36; i <= 44; i++) {
+  squares[i].style.backgroundColor = "orange";
+}
+for (let i = 45; i <= 53; i++) {
+  squares[i].style.backgroundColor = "blue";
+}
+
+// #endregion colors
+
 //#region variables
-square_11.style.backgroundColor = "red";
-square_12.style.backgroundColor = "red";
-square_13.style.backgroundColor = "red";
-square_14.style.backgroundColor = "red";
-square_15.style.backgroundColor = "red";
-square_16.style.backgroundColor = "red";
-square_17.style.backgroundColor = "red";
-square_18.style.backgroundColor = "red";
-square_19.style.backgroundColor = "red";
 
-square_21.style.backgroundColor = "green";
-square_22.style.backgroundColor = "green";
-square_23.style.backgroundColor = "green";
-square_24.style.backgroundColor = "green";
-square_25.style.backgroundColor = "green";
-square_26.style.backgroundColor = "green";
-square_27.style.backgroundColor = "green";
-square_28.style.backgroundColor = "green";
-square_29.style.backgroundColor = "green";
+squares_row1 = [24, 25, 26,  33, 34, 35,  53, 50, 47,   8,  5,  2];
+squares_row2 = [21, 22, 23,  30, 31, 32,  52, 49, 46,   7,  4,  1];
+squares_row3 = [18, 19, 20,  27, 28, 29,  51, 48, 45,   6,  3,  0];
 
-square_31.style.backgroundColor = "yellow";
-square_32.style.backgroundColor = "yellow";
-square_33.style.backgroundColor = "yellow";
-square_34.style.backgroundColor = "yellow";
-square_35.style.backgroundColor = "yellow";
-square_36.style.backgroundColor = "yellow";
-square_37.style.backgroundColor = "yellow";
-square_38.style.backgroundColor = "yellow";
-square_39.style.backgroundColor = "yellow";
+squares_row4 = [42, 43, 44,  51, 52, 53,  17, 14, 11,  26, 23, 20];
+squares_row5 = [39, 40, 41,  48, 49, 50,  16, 13, 10,  25, 22, 19];
+squares_row6 = [36, 37, 38,  45, 46, 47,  15, 12,  9,  24, 21, 18];
 
-square_41.style.backgroundColor = "black";
-square_42.style.backgroundColor = "black";
-square_43.style.backgroundColor = "black";
-square_44.style.backgroundColor = "black";
-square_45.style.backgroundColor = "black";
-square_46.style.backgroundColor = "black";
-square_47.style.backgroundColor = "black";
-square_48.style.backgroundColor = "black";
-square_49.style.backgroundColor = "black";
+squares_row7 = [ 6,  7,  8,  15, 16, 17,  35, 32, 29,  44, 41, 38];
+squares_row8 = [ 3,  4,  5,  12, 13, 14,  34, 31, 28,  43, 40, 37];
+squares_row9 = [ 0,  1,  2,   9, 10, 11,  33, 30, 27,  42, 39, 36];
 
-square_51.style.backgroundColor = "orange";
-square_52.style.backgroundColor = "orange";
-square_53.style.backgroundColor = "orange";
-square_54.style.backgroundColor = "orange";
-square_55.style.backgroundColor = "orange";
-square_56.style.backgroundColor = "orange";
-square_57.style.backgroundColor = "orange";
-square_58.style.backgroundColor = "orange";
-square_59.style.backgroundColor = "orange";
+squares_row1_face = [ 9, 10, 11, 14, 17, 16, 15, 12];
+squares_row3_face = [39, 42, 43, 44, 41, 38, 37, 36];
+squares_row4_face = [27, 28, 29, 32, 35, 34, 33, 30];
+squares_row6_face = [ 3,  6,  7,  8,  5,  2,  1,  0];
+squares_row7_face = [45, 46, 47, 50, 53, 52, 51, 48];
+squares_row9_face = [21, 24, 25, 26, 23, 20, 19, 18];
 
-square_61.style.backgroundColor = "blue";
-square_62.style.backgroundColor = "blue";
-square_63.style.backgroundColor = "blue";
-square_64.style.backgroundColor = "blue";
-square_65.style.backgroundColor = "blue";
-square_66.style.backgroundColor = "blue";
-square_67.style.backgroundColor = "blue";
-square_68.style.backgroundColor = "blue";
-square_69.style.backgroundColor = "blue";
-// #endregion variables
+//#endregion variables
 
 //#region functions
 
 function rotateRow(row, clockwise) {
-  let square1, square2, square3, square4;
-  let square5, square6, square7, square8;
-  let square9, square10, square11, square12;
-  let squareA, squareB, squareC, squareD;
-  let squareE, squareF, squareG, squareH;
+  let rowSquares = [];
+  let rowSquaresFace = [];
   switch (row) {
     case 1:
-      square1 = square_37;
-      square2 = square_38;
-      square3 = square_39;
-      square4 = square_47;
-      square5 = square_48;
-      square6 = square_49;
-      square7 = square_69;
-      square8 = square_66;
-      square9 = square_63;
-      square10 = square_19;
-      square11 = square_16;
-      square12 = square_13;
-      squareA = square_21;
-      squareB = square_22;
-      squareC = square_23;
-      squareD = square_26;
-      squareE = square_29;
-      squareF = square_28;
-      squareG = square_27;
-      squareH = square_24;
+      for (let i = 0; i < squares_row1.length; i++) {
+        rowSquares.push(squares[squares_row1[i]]);
+      }
+      for (let i = 0; i < squares_row1_face.length; i++) {
+        rowSquaresFace.push(squares[squares_row1_face[i]]);
+      }
       break;
     case 2:
-      square1 = square_34;
-      square2 = square_35;
-      square3 = square_36;
-      square4 = square_44;
-      square5 = square_45;
-      square6 = square_46;
-      square7 = square_68;
-      square8 = square_65;
-      square9 = square_62;
-      square10 = square_18;
-      square11 = square_15;
-      square12 = square_12;
+      for (let i = 0; i < squares_row2.length; i++) {
+        rowSquares.push(squares[squares_row2[i]]);
+      }
       break;
     case 3:
-      square1 = square_31;
-      square2 = square_32;
-      square3 = square_33;
-      square4 = square_41;
-      square5 = square_42;
-      square6 = square_43;
-      square7 = square_67;
-      square8 = square_64;
-      square9 = square_61;
-      square10 = square_17;
-      square11 = square_14;
-      square12 = square_11;
-      squareA = square_54;
-      squareB = square_57;
-      squareC = square_58;
-      squareD = square_59;
-      squareE = square_56;
-      squareF = square_53;
-      squareG = square_52;
-      squareH = square_51;
+      for (let i = 0; i < squares_row3.length; i++) {
+        rowSquares.push(squares[squares_row3[i]]);
+      }
+      for (let i = 0; i < squares_row3_face.length; i++) {
+        rowSquaresFace.push(squares[squares_row3_face[i]]);
+      }
       break;
     case 4:
-      square1 = square_57;
-      square2 = square_58;
-      square3 = square_59;
-      square4 = square_67;
-      square5 = square_68;
-      square6 = square_69;
-      square7 = square_29;
-      square8 = square_26;
-      square9 = square_23;
-      square10 = square_39;
-      square11 = square_36;
-      square12 = square_33;
-      squareA = square_41;
-      squareB = square_42;
-      squareC = square_43;
-      squareD = square_46;
-      squareE = square_49;
-      squareF = square_48;
-      squareG = square_47;
-      squareH = square_44;
+      for (let i = 0; i < squares_row4.length; i++) {
+        rowSquares.push(squares[squares_row4[i]]);
+      }
+      for (let i = 0; i < squares_row4_face.length; i++) {
+        rowSquaresFace.push(squares[squares_row4_face[i]]);
+      }
       break;
     case 5:
-      square1 = square_54;
-      square2 = square_55;
-      square3 = square_56;
-      square4 = square_64;
-      square5 = square_65;
-      square6 = square_66;
-      square7 = square_28;
-      square8 = square_25;
-      square9 = square_22;
-      square10 = square_38;
-      square11 = square_35;
-      square12 = square_32;
+      for (let i = 0; i < squares_row5.length; i++) {
+        rowSquares.push(squares[squares_row5[i]]);
+      }
       break;
     case 6:
-      square1 = square_51;
-      square2 = square_52;
-      square3 = square_53;
-      square4 = square_61;
-      square5 = square_62;
-      square6 = square_63;
-      square7 = square_27;
-      square8 = square_24;
-      square9 = square_21;
-      square10 = square_37;
-      square11 = square_34;
-      square12 = square_31;
-      squareA = square_14;
-      squareB = square_17;
-      squareC = square_18;
-      squareD = square_19;
-      squareE = square_16;
-      squareF = square_13;
-      squareG = square_12;
-      squareH = square_11;
+      for (let i = 0; i < squares_row6.length; i++) {
+        rowSquares.push(squares[squares_row6[i]]);
+      }
+      for (let i = 0; i < squares_row6_face.length; i++) {
+        rowSquaresFace.push(squares[squares_row6_face[i]]);
+      }
       break;
     case 7:
-      square1 = square_17;
-      square2 = square_18;
-      square3 = square_19;
-      square4 = square_27;
-      square5 = square_28;
-      square6 = square_29;
-      square7 = square_49;
-      square8 = square_46;
-      square9 = square_43;
-      square10 = square_59;
-      square11 = square_56;
-      square12 = square_53;
-      squareA = square_61;
-      squareB = square_62;
-      squareC = square_63;
-      squareD = square_66;
-      squareE = square_69;
-      squareF = square_68;
-      squareG = square_67;
-      squareH = square_64;
+      for (let i = 0; i < squares_row7.length; i++) {
+        rowSquares.push(squares[squares_row7[i]]);
+      }
+      for (let i = 0; i < squares_row7_face.length; i++) {
+        rowSquaresFace.push(squares[squares_row7_face[i]]);
+      }
       break;
     case 8:
-      square1 = square_14;
-      square2 = square_15;
-      square3 = square_16;
-      square4 = square_24;
-      square5 = square_25;
-      square6 = square_26;
-      square7 = square_48;
-      square8 = square_45;
-      square9 = square_42;
-      square10 = square_58;
-      square11 = square_55;
-      square12 = square_52;
+      for (let i = 0; i < squares_row8.length; i++) {
+        rowSquares.push(squares[squares_row8[i]]);
+      }
       break;
     case 9:
-      square1 = square_11;
-      square2 = square_12;
-      square3 = square_13;
-      square4 = square_21;
-      square5 = square_22;
-      square6 = square_23;
-      square7 = square_47;
-      square8 = square_44;
-      square9 = square_41;
-      square10 = square_57;
-      square11 = square_54;
-      square12 = square_51;
-      squareA = square_34;
-      squareB = square_37;
-      squareC = square_38;
-      squareD = square_39;
-      squareE = square_36;
-      squareF = square_33;
-      squareG = square_32;
-      squareH = square_31;
+      for (let i = 0; i < squares_row9.length; i++) {
+        rowSquares.push(squares[squares_row9[i]]);
+      }
+      for (let i = 0; i < squares_row9_face.length; i++) {
+        rowSquaresFace.push(squares[squares_row9_face[i]]);
+      }
       break;
     }
 
-  let temp1 = square1.style.backgroundColor;
-  let temp2 = square2.style.backgroundColor;
-  let temp3 = square3.style.backgroundColor;
   if (clockwise) {
-    square3.style.backgroundColor = square12.style.backgroundColor;
-    square2.style.backgroundColor = square11.style.backgroundColor;
-    square1.style.backgroundColor = square10.style.backgroundColor;
-    square12.style.backgroundColor = square9.style.backgroundColor;
-    square11.style.backgroundColor = square8.style.backgroundColor;
-    square10.style.backgroundColor = square7.style.backgroundColor;
-    square9.style.backgroundColor = square6.style.backgroundColor;
-    square8.style.backgroundColor = square5.style.backgroundColor;
-    square7.style.backgroundColor = square4.style.backgroundColor;
-    square6.style.backgroundColor = temp3;
-    square5.style.backgroundColor = temp2;
-    square4.style.backgroundColor = temp1;
-
+    let temp2 = rowSquares[11].style.backgroundColor;
+    let temp1 = rowSquares[10].style.backgroundColor;
+    let temp0 = rowSquares[9].style.backgroundColor;
+    for (let i = 11; i > 2; i--) {
+      rowSquares[i].style.backgroundColor = rowSquares[i - 3].style.backgroundColor;
+    }
+    rowSquares[2].style.backgroundColor = temp2;
+    rowSquares[1].style.backgroundColor = temp1;
+    rowSquares[0].style.backgroundColor = temp0;
     if (row == 1 || row == 3 || row == 4 || row == 6 || row == 7 || row == 9) {
-      let tempA = squareA.style.backgroundColor;
-      let tempB = squareB.style.backgroundColor;
-      squareB.style.backgroundColor = squareH.style.backgroundColor;
-      squareA.style.backgroundColor = squareG.style.backgroundColor;
-      squareH.style.backgroundColor = squareF.style.backgroundColor;
-      squareG.style.backgroundColor = squareE.style.backgroundColor;
-      squareF.style.backgroundColor = squareD.style.backgroundColor;
-      squareE.style.backgroundColor = squareC.style.backgroundColor;
-      squareD.style.backgroundColor = tempB;
-      squareC.style.backgroundColor = tempA;
+      let tempA = rowSquaresFace[6].style.backgroundColor;
+      let tempB = rowSquaresFace[7].style.backgroundColor;
+      for (let i = 7; i > 1; i--) {
+        rowSquaresFace[i].style.backgroundColor = rowSquaresFace[i - 2].style.backgroundColor;
+      }
+      rowSquaresFace[1].style.backgroundColor = tempB;
+      rowSquaresFace[0].style.backgroundColor = tempA;
     }
     
   } else {
-    square1.style.backgroundColor = square4.style.backgroundColor;
-    square2.style.backgroundColor = square5.style.backgroundColor;
-    square3.style.backgroundColor = square6.style.backgroundColor;
-    square4.style.backgroundColor = square7.style.backgroundColor;
-    square5.style.backgroundColor = square8.style.backgroundColor;
-    square6.style.backgroundColor = square9.style.backgroundColor;  
-    square7.style.backgroundColor = square10.style.backgroundColor;
-    square8.style.backgroundColor = square11.style.backgroundColor;
-    square9.style.backgroundColor = square12.style.backgroundColor;
-    square10.style.backgroundColor = temp1;
-    square11.style.backgroundColor = temp2;
-    square12.style.backgroundColor = temp3;
-
+    let temp0 = rowSquares[0].style.backgroundColor;
+    let temp1 = rowSquares[1].style.backgroundColor;
+    let temp2 = rowSquares[2].style.backgroundColor;
+    for (let i = 0; i < 9; i++) {
+      rowSquares[i].style.backgroundColor = rowSquares[i + 3].style.backgroundColor;
+    }
+    rowSquares[9].style.backgroundColor = temp0;
+    rowSquares[10].style.backgroundColor = temp1;
+    rowSquares[11].style.backgroundColor = temp2;
     if (row == 1 || row == 3 || row == 4 || row == 6 || row == 7 || row == 9) {
-      let tempA = squareA.style.backgroundColor;
-      let tempB = squareB.style.backgroundColor;
-      squareA.style.backgroundColor = squareC.style.backgroundColor;
-      squareB.style.backgroundColor = squareD.style.backgroundColor;
-      squareC.style.backgroundColor = squareE.style.backgroundColor;
-      squareD.style.backgroundColor = squareF.style.backgroundColor;
-      squareE.style.backgroundColor = squareG.style.backgroundColor;
-      squareF.style.backgroundColor = squareH.style.backgroundColor;
-      squareG.style.backgroundColor = tempA;
-      squareH.style.backgroundColor = tempB;
+      let tempA = rowSquaresFace[0].style.backgroundColor;
+      let tempB = rowSquaresFace[1].style.backgroundColor;
+      for (let i = 0; i < 6; i++) {
+        rowSquaresFace[i].style.backgroundColor = rowSquaresFace[i + 2].style.backgroundColor;
+      }
+      rowSquaresFace[6].style.backgroundColor = tempA;
+      rowSquaresFace[7].style.backgroundColor = tempB;
     }
   }
 }
